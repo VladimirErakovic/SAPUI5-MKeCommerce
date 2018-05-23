@@ -1,0 +1,136 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="mk.ecommerce.view.About" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page 
+		title="" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+		<l:VerticalLayout 
+			width="100%"
+			class="aboutLayout" >
+			<Panel
+				class="sapUiResponsiveMargin"
+				width="auto" >
+				<headerToolbar>
+					<Toolbar height="50px">
+						<content>
+							<Image src="images/sapui5_blue.png" height="50px" ></Image>
+							<Text text=" "></Text>
+							<Title id="aboutTitle" level="H2" text="" />
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<FlexBox
+					height="60px"
+					direction="Column"
+					alignItems="Center"
+					justifyContent="Center">
+					<items>
+						<l:HorizontalLayout  width="200px" >
+							<Label id="appRegistered" text="" class="sapUiSmallMarginEnd"  design="Bold" />
+							<Text id="txtPartnerName" text=""  />
+						</l:HorizontalLayout>
+						<l:HorizontalLayout width="200px" >	
+							<Label id="partnerId" text="" class="sapUiSmallMarginEnd"  design="Bold" />
+							<Text id="txtPartnerID" text=""  />
+						</l:HorizontalLayout>
+						<l:HorizontalLayout width="200px" >
+							<Label id="purchasePlace" text="" class="sapUiSmallMarginEnd"  design="Bold"  />
+							<Text id="txtPurchasePlace" text=""  />
+						</l:HorizontalLayout>
+					</items>
+				</FlexBox>
+			</Panel>
+			
+			<Panel
+				class="sapUiResponsiveMargin"
+				width="auto" > 
+				<FlexBox
+					height="145px"
+					direction="Column"
+					alignItems="Center"
+					justifyContent="Center">
+					<items>
+						<Label 
+							id="leaveOpinion" 
+							text="" 
+							design="Bold" />
+						<TextArea
+							id="txtUserOpinion"
+							height="100px"
+							width="320px"
+							cols="27"
+							maxLength="200"
+							rows="4">
+						</TextArea>
+						<Button
+							id="btnSendUserOpinion" 
+							text="" 
+							icon="sap-icon://account"  
+							type="Accept" 
+							press="onSendOpinion" />
+					</items>
+				</FlexBox>
+			</Panel>
+			
+			<Panel
+				class="sapUiResponsiveMargin"
+				width="auto" > 
+				<FlexBox
+					height="60px"
+					direction="Column"
+					alignItems="Center"
+					justifyContent="Center"
+					class="devTeam" >
+					<items>
+						<Text id="developmentTeam" text=""  />
+						<Text id="teamNames" text="" textAlign="Center" />
+						<Text id="MKBS" text="" textAlign="Center" />
+					</items>
+				</FlexBox>
+			</Panel>
+			
+			<Panel
+				class="sapUiResponsiveMargin"
+				width="auto" > 
+				<FlexBox
+					height="30px"
+					alignItems="Center"
+					justifyContent="Center">
+					<items>
+						<Label id="allRightsReserved" text="" class="sapUiSmallMarginEnd" design="Bold" />
+					</items>
+				</FlexBox>
+			</Panel>
+			
+		</l:VerticalLayout>
+		</content>
+		<footer>
+			<Bar>
+				<contentMiddle>
+					<Button
+						id="btnUserAgreement" 
+						text="" 
+						icon="sap-icon://learning-assistant"  
+						type="Emphasized" 
+						press="onUserAgreement" />
+				</contentMiddle>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

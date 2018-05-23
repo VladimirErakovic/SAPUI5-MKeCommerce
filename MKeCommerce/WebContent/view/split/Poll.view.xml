@@ -1,0 +1,74 @@
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	controllerName="mk.ecommerce.view.split.Poll" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page 
+		id="pollDetailsPage"
+		title=""
+		class="sapUiFioriObjectPage"  
+		showNavButton="{device>/isPhone}" 
+		navButtonPress="handleNavButtonPress">
+
+		<ObjectHeader 
+			id="pollDetailHeader"
+			title="{ 
+				wrapping: 'true'
+			}"
+			responsive="false">
+		</ObjectHeader>
+		
+		<l:Grid
+			defaultSpan="L12 M12 S12"
+			width="auto">
+			<l:content>
+				<f:SimpleForm
+					id="idPollForm"
+					minWidth="1024"
+					maxContainerCols="3"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="4"
+					columnsL="1"
+					columnsM="1"
+					class="editableForm">
+					
+					<f:content>
+						<Label id="pollAnswerLabel" text="" design="Bold" />
+						<TextArea
+							id="txtPollAnswer"
+							height="200px"
+							cols="30"
+							maxLength="200"
+							rows="4">
+						</TextArea>
+			
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button
+						id="btnPollSend" 
+						text="" 
+						icon="sap-icon://action"  
+						type="Emphasized" 
+						press="onSendPollAnswer" />
+					<Button 
+						id="btnPollCancel"
+						text="" 
+						icon="sap-icon://decline" 
+						press="onCancelPoll" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

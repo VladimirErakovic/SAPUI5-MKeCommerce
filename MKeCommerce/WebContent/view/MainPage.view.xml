@@ -1,0 +1,132 @@
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="mk.ecommerce.view.MainPage" 
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<Page 
+		title=""
+		showHeader="true"
+		enableScrolling="false">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+	      			<Button 
+						id="btnLogout"
+						icon="sap-icon://log" 
+						text="Odjava" 
+						type="Up" 
+						press="btnLogoutPress"  />
+	      		</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+				<contentRight>
+					<MenuButton 
+						id="userNameMenu" 
+						width="auto"
+						text="" >
+			            <menu>
+			                <Menu itemSelected="onMenuAction">
+			                    <items>
+			                        <MenuItem id="settingsButton" text="" icon="sap-icon://settings" key="1" />
+			                        <MenuItem id="aboutButton" text="" icon="sap-icon://hello-world" key="2" />
+			                        <MenuItem id="logoutButton" text="" icon="sap-icon://log" key="3" />
+			                    </items>
+			                </Menu>
+			            </menu>
+			        </MenuButton>				
+				</contentRight>
+			</Bar>
+		</customHeader>
+
+
+			    <TileContainer
+			    	id="containerMain"
+			    	width="100%"
+			    	busyIndicatorDelay="0" >
+			    	<StandardTile
+			    		id="notifTile"
+			    		number=""
+			        	icon="sap-icon://notification"
+			        	title="" 
+			        	info=""
+			        	press="handleNotifications" />
+			      	<StandardTile
+			      		id="offersTile"
+			      		number=""
+			        	icon="sap-icon://email"
+			        	title=""
+			        	info=""
+			        	press="handleOffers" />
+			        <StandardTile
+			        	id="myOfferTile"
+			        	icon="sap-icon://activity-individual"
+			        	title=""
+			        	info=""
+			        	press="handleCustom" />
+			        <StandardTile
+			        	id="customListTile"
+			        	icon="sap-icon://account"
+			        	title=""
+			        	info=""
+			        	press="handleCustomList" />
+			        <StandardTile
+			        	id="archiveTile"
+			        	icon="sap-icon://dimension"
+			        	title=""
+			        	info=""
+			        	press="handleArchive" />
+			        <StandardTile
+			        	id="boardTile"
+			        	icon="sap-icon://internet-browser"
+			        	title=""
+			        	info=""
+			        	press="handleBoard" />
+			        <StandardTile
+			        	id="weatherTile"
+			        	icon="sap-icon://temperature"
+			        	title=""
+			        	info=""
+			        	press="handleWeather" />
+			        <StandardTile
+			        	id="contactsTile"
+			        	icon="sap-icon://outgoing-call"
+			        	title=""
+			        	info=""
+			        	press="handleContacts" />
+			        <StandardTile
+			        	id="debtTile"
+			        	icon="sap-icon://pie-chart"
+			        	title=""
+			        	info=""
+			        	press="handleDebtStructure" />
+			        <StandardTile
+			        	id="lagerTile"
+			        	icon="sap-icon://database"
+			        	title=""
+			        	info=""
+			        	press="handleLager" />
+
+			    </TileContainer>
+
+	
+	    <footer>
+	      	<Bar>
+	      		<contentLeft>
+	      			<Label id="userPlaceInfo" text="" />
+	      		</contentLeft>
+	      		<contentMiddle>
+					<core:Icon 
+						id="notifAppStatusIcon"
+						src="" 
+						color=""
+						height="45px" 
+						size="35px"
+						tooltip="" />
+				</contentMiddle>
+	      	</Bar>
+	    </footer>
+	</Page>
+</core:View>

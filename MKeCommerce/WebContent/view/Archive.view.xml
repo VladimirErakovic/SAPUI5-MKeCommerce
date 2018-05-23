@@ -1,0 +1,96 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="mk.ecommerce.view.Archive" 
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<Page 
+		title=""
+		class="sapUiResponsiveContentPadding" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+			<List
+				id="archiveList"
+				items="{/EtNtfcSet}"
+				mode="{device>/listMode}"	
+				noDataText=""
+				headerText=""
+				selectionChange="onArchiveItemPress"
+				enableBusyIndicator="true"
+				growing="true" 
+				growingScrollToLoad="true"
+				busyIndicatorDelay="0" >
+				<items>
+					<ObjectListItem
+						title="{
+							parts:[
+								{path:'Maktx'}, 
+								{path: 'Smerp'},
+								{path: 'Sttxt'}
+							],
+							formatter: 'mk.ecommerce.util.Formatter.archiveTitle'
+						}"
+						icon="{
+							path: 'Smerp',
+							formatter:'mk.ecommerce.util.Formatter.getIconSmerp'
+						}"
+						type="{device>/listItemType}"
+						number="{
+							path: 'Preis2',
+							formatter: 'mk.ecommerce.util.Formatter.currencyValue'
+						}"
+						numberUnit="{Waers}"
+						press="onArchiveItemPress" >
+						<attributes> 
+							<ObjectAttribute 
+								text="{
+								path: 'KdateStr',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+									style: 'medium',
+									source: {
+										pattern: 'dd/MM/yyyy'
+									}
+								}
+							}" />
+							<ObjectAttribute text="{
+									parts:[
+										{path:'Notxt'}, 
+										{path: 'Smerp'},
+										{path: 'Sttxt'}
+									],
+									formatter: 'mk.ecommerce.util.Formatter.archiveText'
+									}" />
+								
+						</attributes> 
+						<firstStatus>
+							<ObjectStatus
+								text="{
+									path: 'Smerp',
+									formatter: 'mk.ecommerce.util.Formatter.status'
+									}" />
+						</firstStatus>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Bar>
+				<contentLeft>
+
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

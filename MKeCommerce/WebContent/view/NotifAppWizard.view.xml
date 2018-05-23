@@ -1,0 +1,270 @@
+<core:View 
+	height="100%"
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	controllerName="mk.ecommerce.view.NotifAppWizard" 
+	xmlns:html="http://www.w3.org/1999/xhtml">	
+	<Page 
+		title="">	
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						id="btnWizardBackNav"
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<NavContainer 
+			id="wizardNavContainer">
+			<pages>
+				<Page
+					id="wizardContentPage"
+					showHeader="false">
+					
+						<content>
+							<Wizard 
+								id="CreateProductWizard"
+								complete="wizardCompletedHandler">
+								<WizardStep 
+									id="notifAppDownload"
+									title="{i18n>WizardStepOneTitle}"
+									validated="true" >
+									<MessageStrip 
+										class="sapUiSmallMarginBottom"
+										text="{i18n>StepOneMsgStripText}"
+										showIcon="true" />
+										<HBox
+											alignItems="Center"
+											justifyContent="Center"
+											width="100%">
+											<Button 
+												id="btnDownloadNotifApp" 
+												icon="sap-icon://download-from-cloud" 
+												text="{i18n>WizardBtnDownloadApp}"
+												type="Emphasized"
+												press="onNotifAppDownload" />
+										</HBox>
+								</WizardStep>
+								
+								<WizardStep 
+									id="notifAppInstallation"
+									title="{i18n>WizardStepTwoTitle}"
+									validated="true" >
+									<MessageStrip 
+										class="sapUiSmallMarginBottom"
+										text="{i18n>StepTwoMsgStripText}"
+										showIcon="true" />
+										<VBox>
+											<Image
+												id="image1"
+												src="images/1.png"
+												densityAware="false"
+												height="360px"
+												decorative="false"
+												press="handleImage1Press" >
+											</Image>
+											<Text 
+												id="img1Text"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage1Text}"/>
+											<Image
+												id="image2c"
+												src="images/2c.png"
+												densityAware="false"
+												height="238px"
+												decorative="false"
+												press="handleImage2cPress" >
+											</Image>
+											<Text 
+												id="img2cText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage2cText}"/>
+											<Image
+												id="image1a"
+												src="images/1a.jpg"
+												densityAware="false"
+												height="360px"
+												decorative="false"
+												press="handleImage1aPress" >
+											</Image>
+											<Text 
+												id="img1aText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage1aText}"/>
+											<Image
+												id="image2a"
+												src="images/2a.jpg"
+												densityAware="false"
+												height="360px"
+												decorative="false"
+												press="handleImage2aPress" >
+											</Image>
+											<Text 
+												id="img2aText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage2aText}"/>
+											<Image
+												id="image3a"
+												src="images/3a.jpg"
+												densityAware="false"
+												height="360px"
+												decorative="false"
+												press="handleImage3aPress" >
+											</Image>
+											<Text 
+												id="img3aText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage3aText}"/>
+											<Image
+												id="image4a"
+												src="images/4a.jpg"
+												densityAware="false"
+												height="360px"
+												decorative="false"
+												press="handleImage4aPress" >
+											</Image>
+											<Text 
+												id="img4aText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage4aText}"/>
+											<Image
+												id="image5a"
+												src="images/5a.jpg"
+												densityAware="false"
+												height="360px"
+												decorative="false"
+												press="handleImage5aPress" >
+											</Image>
+											<Text 
+												id="img5aText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage5aText}"/>
+										</VBox>		  
+								</WizardStep>
+								
+								<WizardStep 
+									id="notifAppStarting"
+									title="{i18n>WizardStepThreeTitle}"
+									validated="true" >
+									<MessageStrip 
+										class="sapUiSmallMarginBottom"
+										text="{i18n>StepThreeMsgStripText}"
+										showIcon="true"/>
+										<VBox>
+											<Image
+												id="image8"
+												src="images/8.png"
+												densityAware="false"
+												height="101px"
+												decorative="false"
+												press="handleImage8Press" >
+											</Image>
+											<Text 
+												id="img8Text"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage8Text}"/>
+									 		<Image
+												id="image8a"
+												src="images/8a.jpg"
+												densityAware="false"
+												height="272px"
+												decorative="false" >
+											</Image>
+											<Text 
+												id="img8aText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage8aText}"/>
+									 		<Image
+												id="image8b"
+												src="images/8b.jpg"
+												densityAware="false"
+												height="288px"
+												decorative="false" >
+											</Image>
+											<Text 
+												id="img8bText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage8bText}"/>
+									 		<Image
+												id="image8c"
+												src="images/8c.jpg"
+												densityAware="false"
+												height="296px"
+												decorative="false" >
+											</Image>
+											<Text 
+												id="img8cText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage8cText}"/>
+									 		<Image
+												id="image8d"
+												src="images/8d.jpg"
+												densityAware="false"
+												height="325px"
+												decorative="false" >
+											</Image>
+											<Text 
+												id="img8dText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage8dText}"/>
+									 		<Image
+												id="image8e"
+												src="images/8e.jpg"
+												densityAware="false"
+												height="434px"
+												decorative="false" >
+											</Image>
+											<Text 
+												id="img8eText"
+												class="sapUiSmallMarginBottom"
+									 			text="{i18n>WizardImage8eText}"/>
+										</VBox>		  
+								</WizardStep>
+								
+								<WizardStep 
+									id="notifAppTesting"
+									title="{i18n>WizardStepFourTitle}"
+									validated="false" >
+									<MessageStrip 
+										class="sapUiSmallMarginBottom"
+									    text="{i18n>StepFourMsgStripText}"
+										showIcon="true"/>
+										<HBox
+											alignItems="Center"
+											justifyContent="Center"
+											width="100%">
+											<Button 
+												id="btnTestNotifApp" 
+												icon="sap-icon://activate" 
+												text="{i18n>WizardBtnTestApp}"
+												type="Accept"
+												press="onNotifAppTest" />
+										</HBox>
+												  
+								</WizardStep>
+			
+							</Wizard>
+						</content>
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button 
+								id="bntGoToLoginPage"
+								icon="sap-icon://thumb-up"
+								text="{i18n>WizardBtnGoToLoginPage}" 
+								press="goToLoginPage" />
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</NavContainer>
+	</Page>
+</core:View>

@@ -1,0 +1,89 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="mk.ecommerce.view.ExtraRegPage" 
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<Page 
+		id="extraRegPage"
+		title="" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<l:VerticalLayout
+			width="100%" >
+			<l:content>
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title id="extRegTitle" level="H2" text="" />
+						</Toolbar>
+					</headerToolbar>
+					<FlexBox
+						direction="Column"
+						alignItems="Center"
+						justifyContent="Center">
+						<items>
+                  			
+                  			<Label id="extRegCompanyLabel" text="" design="Bold" />      
+                  			<Select
+                  				id="companySelect"
+                  				selectedKey=""
+                  				width="280px"
+                  				change="companySelected"
+								items="{/EtBukrsSet}">
+								<items> 
+									<core:Item key="{Bukrs}" text="{Butxt}" />
+								</items> 
+							</Select>         			
+
+                  			<Label id="extRegOtmesLabel" text="" design="Bold" />
+                  			<Select
+                  				id="pplaceSelect"
+                  				selectedKey=""
+                  				width="280px"
+								items="{/EtOtmesSet}">
+								<items> 
+									<core:Item key="{Otmid}" text="{Otmnaz}" />
+								</items> 
+							</Select>
+                  			
+                  			<Label id="extRegPdvLabel" text="" design="Bold" />
+                  			<Select
+                  				id="pdvSelect"
+                  				width="120px">
+								<items> 
+									<core:Item id="noItem" key="0" text="" />
+									<core:Item id="yesItem" key="X" text="" />
+								</items> 
+							</Select>
+
+						</items>
+					</FlexBox>
+					</Panel>
+			</l:content>
+		</l:VerticalLayout>
+		<footer>
+			<Bar>
+				<contentMiddle>
+					<Button 
+						id="btnExtRegSend"
+						icon="sap-icon://sys-enter" 
+						text="" 
+						type="Emphasized" 
+						press="btnExtraRegister"  />
+				</contentMiddle>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,89 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="mk.ecommerce.view.Settings" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page 
+		id="settingsPage"
+		title="" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBackSettings" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<l:VerticalLayout
+			width="100%" >
+			<l:content>
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title id="settingsTitle" level="H2" text="" />
+						</Toolbar>
+					</headerToolbar>
+					<FlexBox
+						direction="Column"
+						alignItems="Center"
+						justifyContent="Center">
+						<items>
+                  			
+                  			<Label id="settingsLangLabel" text="" design="Bold" />
+                  			<Select
+                  				id="languageSelectSettings"
+                  				selectedKey="sr_RS"
+                  				width="170px"
+								items="{/LanguageCollection}">
+								<items> 
+									<core:Item key="{key}" text="{text}" />
+								</items> 
+							</Select>
+							<Button 
+								id="btnSettingsSave"
+								icon="sap-icon://synchronize" 
+								text="" 
+								type="Emphasized" 
+								press="btnSavePress"  />
+							<Label id="settingsEmptyLabel" text=" " design="Bold" />
+							<Label id="settingsFilesLabel" text="" design="Bold" />
+							<Text id="downloadWarning" text="" textAlign="Center" width="340px" />
+							<Button 
+								id="btnSettingsDownload"
+								icon="sap-icon://download" 
+								text="" 
+								type="Accept" 
+								press="btnDownloadPress"  />
+							<Label id="settingsEmptyLabel2" text=" " design="Bold" />
+							<Label id="settingsFilesLabel2" text="" design="Bold" />
+							<Button 
+								id="btnSettingsDownload2"
+								icon="sap-icon://download" 
+								text="" 
+								type="Accept" 
+								press="btnDownloadPress2"  />
+							<Label id="settingsEmptyLabel3" text=" " design="Bold" />
+							<Link 
+								id="lnkNotifAppUserManual" 
+								text="" 
+								textAlign="Center" 
+								wrapping="true" 
+								emphasized="true"
+								press="showWizard" />
+						</items>
+					</FlexBox>
+					</Panel>
+			</l:content>
+		</l:VerticalLayout>
+		<footer>
+			<Bar>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

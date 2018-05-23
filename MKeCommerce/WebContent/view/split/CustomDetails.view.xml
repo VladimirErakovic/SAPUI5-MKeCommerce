@@ -1,0 +1,108 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	controllerName="mk.ecommerce.view.split.CustomDetails"
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	
+	<Page 
+		id="customOfferDetailsPage"
+		title=""
+		class="sapUiFioriObjectPage"  
+		showNavButton="{device>/isPhone}" 
+		navButtonPress="handleNavButtonPress">
+	
+		<ObjectHeader 
+			id="customOfferDetailHeader"
+			title="{ 
+				wrapping: 'true'
+			}"
+			intro="{
+				textDirection: 'Inherit',
+				wrapping: true,
+				textAlign: 'Begin',
+				width: '',
+				maxLines: 4
+			}"
+			responsive="true" >
+		</ObjectHeader>
+		<VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="SimpleFormDisplay354"
+				minWidth="1024"
+				maxContainerCols="2"
+				editable="false"
+				layout="ResponsiveGridLayout"
+				labelSpanL="3"
+				labelSpanM="3"
+				emptySpanL="4"
+				emptySpanM="4"
+				columnsL="1"
+				columnsM="1">
+				<f:content>
+					<l:VerticalLayout>				
+						<l:HorizontalLayout>
+							<Label id="customOfferPriceLabel" text="" width="200px" design="Bold" />
+							<Text id="customOfferPrice" text="" width="80px" />
+							<Text id="customOfferWaers" text="" width="100px" textAlign="End"/>
+						</l:HorizontalLayout>
+						<l:HorizontalLayout>
+							<Label id="customOfferAmountLabel" text="" width="200px" design="Bold" />
+							<Text id="customOfferAmount" text="" width="80px" />
+							<Text id="customOfferMeins" text="" width="100px" textAlign="End"/>
+						</l:HorizontalLayout>
+						<l:HorizontalLayout>
+							<Label id="customOfferDateLabel" text="" width="200px" design="Bold" />
+							<Text id="customOfferDate" text="" width="80px" />
+							<Text id="customOfferTime" text="" width="100px" textAlign="End"/>
+						</l:HorizontalLayout>
+						<Text id="customOfferEmptyLine1" text="" width="380px" />
+						<l:HorizontalLayout>
+							<Label id="customOfferStatusLabel" text="" width="200px" design="Bold" />
+							<Text id="customOfferStatus" text="" width="200px" />
+						</l:HorizontalLayout>
+						
+						<l:HorizontalLayout>
+							<Label id="customAgreedPriceLabel" text="" width="200px" design="Bold" />
+							<Text id="customAgreedPrice" text="" width="80px" />
+							<Text id="customAgreedWaers" text="" width="100px" textAlign="End"/>
+						</l:HorizontalLayout>
+						<l:HorizontalLayout>
+							<Label id="customAgreedAmountLabel" text="" width="200px" design="Bold" />
+							<Text id="customAgreedAmount" text="" width="80px" />
+							<Text id="customAgreedMeins" text="" width="100px" textAlign="End"/>
+						</l:HorizontalLayout>
+						<Text id="customOfferEmptyLine2" text="" width="380px" />
+						<l:HorizontalLayout>
+							<Label id="customAgreedDateLabel" text="" width="200px" design="Bold" />
+							<Text id="customAgreedDate" text="" width="80px" />
+						</l:HorizontalLayout>
+						<l:HorizontalLayout>
+							<Label id="customAgreedNacplLabel" text="" width="200px" design="Bold" />
+							<Text id="customAgreedNacpl" text="" width="220px" />
+						</l:HorizontalLayout>
+						<l:HorizontalLayout>
+							<Label id="customAgreedUslplLabel" text="" width="200px" design="Bold" />
+							<Text id="customAgreedUslpl" text="" width="220px" />
+						</l:HorizontalLayout>
+						<l:HorizontalLayout>
+							<Label id="customAgreedRobslLabel" text="" width="200px" design="Bold" />
+							<Text id="customAgreedRobsl" text="" width="220px" />
+						</l:HorizontalLayout>
+						<Text id="customOfferEmptyLine3" text="" width="380px" />
+						<l:HorizontalLayout>
+							<Label id="customAgreedCommentLabel" text="" width="200px" design="Bold" />
+							<Text id="customAgreedComment" text="" width="220px" />
+						</l:HorizontalLayout>
+					</l:VerticalLayout>
+			</f:content>
+			</f:SimpleForm>
+		</VBox>	
+		<footer>
+			<Bar>
+
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

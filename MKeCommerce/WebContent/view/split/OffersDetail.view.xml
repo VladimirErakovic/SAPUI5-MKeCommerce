@@ -1,0 +1,173 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	controllerName="mk.ecommerce.view.split.OffersDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	
+	<Page 
+		id="offerDetailsPage"
+		title=""
+		class="sapUiFioriObjectPage"  
+		showNavButton="{device>/isPhone}" 
+		navButtonPress="handleNavButtonPress">
+		
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+				<contentRight>
+					<Button
+						id="detailExitButton"
+						icon="sap-icon://sys-cancel-2" 
+						tooltip=""
+	                 	press="onCancelDetails" />
+				</contentRight>
+			</Bar>
+		</customHeader>
+	
+		<ObjectHeader 
+			id="offerDetailHeader"
+			title="{ 
+				wrapping: 'true'
+			}"
+			intro="{
+				textDirection: 'Inherit',
+				wrapping: true,
+				textAlign: 'Begin',
+				width: '',
+				maxLines: 4
+			}"
+			responsive="true"
+			number="{Ntfcid}"
+			numberUnit="{}">
+
+		</ObjectHeader>
+		
+		<l:Grid
+			defaultSpan="L12 M12 S12"
+			vSpacing="0.5"
+			width="auto">
+			<l:content>
+				<Label id="createAnswerLabel" text="" design="Bold" class="sapUiSmallMarginTop" />
+				<f:SimpleForm
+					id="idOfferForm"
+					minWidth="1024"
+					maxContainerCols="3"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="4"
+					columnsL="1"
+					columnsM="1"
+					class="editableForm">
+					<f:content>
+						<Label id="offersDPriceLabel" text=""  labelFor="idOfferPrice" design="Bold" />
+						<l:HorizontalLayout >
+							<Input 
+								id="idOfferPrice"  
+								value="0" 
+								width="150px" 
+								change="onChangePrice"/>
+							<FlexBox
+								width="70px"
+								height="50px"
+								alignItems="Center"
+								justifyContent="Center">
+								<items>
+									<Label text="RSD/kg" design="Bold" />
+								</items>
+							</FlexBox>
+						</l:HorizontalLayout>
+						<Label id="offersDAmountLabel" text="" design="Bold" />
+						<l:HorizontalLayout >
+                  			<Button 
+								id="btnMinus" 
+								icon="sap-icon://sys-minus" 
+								tooltip=""
+								press="btnMinusAction" >
+							</Button>
+                  			<Input 
+                  				id="idOfferAmount" 
+                  				value="0" 
+                  				change="onChangeAmount"/>
+                  			<Button 
+								id="btnPlus" 
+								icon="sap-icon://sys-add" 
+								tooltip=""
+								press="btnPlusAction" >
+							</Button>
+							<FlexBox
+								width="40px"
+								height="50px"
+								alignItems="Center"
+								justifyContent="Center">
+								<items>
+									<Label text="kg" design="Bold" />
+								</items>
+							</FlexBox>	
+                  		</l:HorizontalLayout>
+					</f:content>
+				</f:SimpleForm>
+				<f:SimpleForm
+					id="idOfferForm2"
+					minWidth="1024"
+					maxContainerCols="3"
+					editable="false"
+					layout="ResponsiveGridLayout"
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="4"
+					columnsL="1"
+					columnsM="1"
+					class="editableForm">
+						<f:content>
+							<l:VerticalLayout>
+								<l:HorizontalLayout  >
+									<Label id="offersDValidFromLabel" text="" width="70px" design="Bold" />
+									<Text id="validFromDate" text="" width="80px" />
+									<Text id="validFromTime" text="" width="100px" textAlign="End"/>
+								</l:HorizontalLayout>
+								<l:HorizontalLayout  >
+									<Label id="offersDValidUntilLabel" text="" width="70px" design="Bold" />
+									<Text id="validToDate" text="" width="80px" />
+									<Text id="validToTime" text="" width="100px" textAlign="End"/>
+								</l:HorizontalLayout>
+								<Label id="offersDFillLabel" text="" design="Bold" />
+								<Text id="emptyLine1" text="" />
+								<Text id="offersDStatus" text="" />
+								<Text id="emptyLine2" text="" />
+								<Text id="sendClickActionText" text="" />
+								<Text id="cancelClickActionText" text="" />
+							</l:VerticalLayout>
+						</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+		
+		
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button
+						id="btnOfferSend" 
+						text="" 
+						icon="sap-icon://action"  
+						type="Emphasized" 
+						press="onConfirmDialog" />
+					<Button 
+						id="btnOfferCancel"
+						text="" 
+						icon="sap-icon://decline"
+						press="onCancelDialog" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

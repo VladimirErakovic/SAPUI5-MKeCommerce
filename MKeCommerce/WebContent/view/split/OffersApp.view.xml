@@ -1,0 +1,20 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	displayBlock="true" 
+	controllerName="mk.ecommerce.view.split.OffersApp"  
+	height="100%" >
+	<SplitApp 
+		id="offersContainer" 
+		showHeader="false" 
+		mode="ShowHideMode" >
+		<masterPages>
+			<!-- filled dynamically by routing -->
+		</masterPages>
+		<detailPages>
+			<!-- filled dynamically by routing -->
+		</detailPages>
+
+	</SplitApp>
+</mvc:View>

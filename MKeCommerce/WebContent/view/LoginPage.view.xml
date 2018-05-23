@@ -1,0 +1,97 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:l="sap.ui.layout" 
+	controllerName="mk.ecommerce.view.LoginPage" 
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+    <Page 
+    	title="">
+    	<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="47px" ></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<l:VerticalLayout
+			width="100%" >
+			<l:content>
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title id="welcomeText" level="H2" text="" />
+						</Toolbar>
+					</headerToolbar>
+					<FlexBox
+						direction="Column"
+						alignItems="Center"
+						justifyContent="Center">
+						<items>
+							<Label 
+								id="usernameText"
+								text="" 
+								design="Bold" />
+                  			<Input 
+                  				id="userID" 
+                  				type="Text" 
+                  				placeholder="" 
+                  				submit="onUsernameSubmit"
+                  				width="280px"
+                  				liveChange="onUsernameChange" />
+                  			<Label text=" " />
+                  			<Label 
+                  				id="passwordText"
+                  				text="" 
+                  				design="Bold" />
+                  			<Input 
+                  				id="passID" 
+                  				type="Password" 
+                  				placeholder="" 
+                  				submit="onPasswordSubmit"
+                  				width="280px" />
+                  			<Button 
+                  				id="loginButton"
+                  				icon="sap-icon://sys-enter" 
+                  				text="" 
+                  				type="Emphasized" 
+                  				witdth="200px"
+                  				press="btnLogin" />
+                  			<Label text=" " />
+                  			<l:HorizontalLayout >
+                  				<Label 
+                  					id="noAccountText"
+                  					text="" 
+                  					width="100px" />
+                  				<Link 
+                  					id="registrationLink"
+                  					text="" 
+                  					emphasized="true" 
+                  					press="handleRegistrationLink" />
+                  			</l:HorizontalLayout>
+                  			<Label 
+                  				id="lostPassText"
+                  				text="" />
+                  			<Link 
+                  				id="passResetLink"
+                  				text="" 
+                  				emphasized="true" 
+                  				press="handlePasswordResetLink" />
+                  			<Label text=" " />
+                  			<Image src="images/openui5.png" height="120px" ></Image>
+						</items>
+					</FlexBox>
+				</Panel>
+			</l:content>
+		</l:VerticalLayout>
+		<footer>
+			<Bar>
+				<contentMiddle>
+					<Label
+						id="txtCompanyName" 
+                  		text="" />
+				</contentMiddle>
+			</Bar>
+		</footer>
+    </Page>
+</mvc:View>

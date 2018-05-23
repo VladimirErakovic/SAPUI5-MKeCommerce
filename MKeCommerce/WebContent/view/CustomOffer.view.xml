@@ -1,0 +1,195 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	controllerName="mk.ecommerce.view.CustomOffer" 
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<Page 
+		title="" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<l:VerticalLayout
+			width="100%" >
+			<l:content>
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title id="customOfferTitle" level="H2" text="" />
+						</Toolbar>
+					</headerToolbar>
+										
+				</Panel>
+			</l:content>
+		</l:VerticalLayout>
+		<l:Grid
+			defaultSpan="L12 M12 S12"
+			width="auto">
+			<l:content>
+				<f:SimpleForm
+					id="idOfferForm"
+					minWidth="1024"
+					maxContainerCols="3"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="4"
+					columnsL="1"
+					columnsM="1"
+					class="editableForm" >
+					<f:content>
+					
+						<Label id="customMatLabel" text="" labelFor="materialSelect" design="Bold" />
+				        <Select
+                 			id="materialSelect"
+                 			width="210px"
+							items="{/EtMaterSet}">
+							<items> 
+								<core:Item key="{Matid}" text="{Matnaz}" tooltip="{Matps}" />
+							</items> 
+						</Select>
+						<Label id="customPriceLabel" text="" labelFor="idCustomOfferPrice" design="Bold" />
+						<l:HorizontalLayout >
+							<Input 
+								id="idCustomOfferPrice"  
+								type="Text"
+								value=''
+								width="210px" 
+								maxLength="15"
+								change="onChangePrice"/>
+							<FlexBox
+								width="70px"
+								height="50px"
+								alignItems="Center"
+								justifyContent="Center">
+								<items>
+									<Label text="RSD/kg" design="Bold" />
+								</items>
+							</FlexBox>		
+						</l:HorizontalLayout>
+						<Label id="customAmountLabel" text="" design="Bold" />
+						<l:HorizontalLayout >
+                  			<Button 
+								id="btnMinusCustom" 
+								icon="sap-icon://sys-minus" 
+								tooltip=""
+								press="btnMinusAction" >
+							</Button>
+                  			<Input 
+                  				id="idCustomOfferAmount" 
+                  				type="Text"
+                  				value='0'
+                  				width="130px" 
+                  				maxLength="15"
+                  				change="onChangeAmount"/>
+                  			<Button 
+								id="btnPlusCustom" 
+								icon="sap-icon://sys-add" 
+								tooltip=""
+								press="btnPlusAction" >
+							</Button>
+							<FlexBox
+								width="40px"
+								height="50px"
+								alignItems="Center"
+								justifyContent="Center">
+								<items>
+									<Label text="kg" design="Bold" />
+								</items>
+							</FlexBox>	
+                  		</l:HorizontalLayout>
+                  		
+                  		<Label id="totalPriceLabel" text="" labelFor="idCustomOfferTotalPrice" design="Bold" />
+                  		<l:HorizontalLayout>
+							<Input 
+								id="idCustomOfferTotalPrice"  
+								type="Text"
+								value=''
+								width="210px" 
+								maxLength="20"
+								editable="false"/>
+							<FlexBox
+								width="70px"
+								height="50px"
+								alignItems="Center"
+								justifyContent="Center">
+								<items>
+									<Label text="RSD/kg" design="Bold" />
+								</items>
+							</FlexBox>		
+						</l:HorizontalLayout>
+						
+						<Label id="customRadioLabel" text="" design="Bold" />
+						<RadioButtonGroup 
+							id="radioGroup"
+							columns="3" width="480px" >
+							<buttons>
+								<RadioButton id="rb1" text="" />
+								<RadioButton id="rb2" text="" />
+								<RadioButton id="rb3" text="" />
+							</buttons>
+						</RadioButtonGroup>
+						
+						<Label id="customDateLabel" text="" design="Bold" />
+						<DateTimeInput
+							id="idCustomValidDate"
+							type="Date"
+							width="150px" 
+							valueFormat="dd.MM.yyyy"
+							displayFormat= "dd.MM.yyyy"
+							value="" />
+					
+						<Label id="customCommentLabel" text="" design="Bold" />
+						<TextArea
+							id="txtCustomComment"
+							height="140px"
+							cols="30"
+							maxLength="200"
+							rows="4">
+						</TextArea>
+				
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+				
+		<footer>
+			<Bar>
+				<contentLeft>
+					<Button
+						id="btnJumpToAllCustomOffers" 
+						text="" 
+						icon="sap-icon://dimension"  
+						type="Accept" 
+						press="onJumpToAllCustomOffers" />
+				</contentLeft>
+				<contentRight>
+					<Button
+						id="btnCustomOfferSend" 
+						text="" 
+						icon="sap-icon://action"  
+						type="Emphasized" 
+						press="onConfirmDialog" />
+					<Button 
+						id="btnCustomOfferCancel"
+						text="" 
+						icon="sap-icon://decline" 
+						press="onCancelCustomOffer" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

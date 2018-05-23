@@ -1,0 +1,97 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="mk.ecommerce.view.RegistrationPage" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page 
+		id="regPage"
+		title="" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<l:VerticalLayout
+			width="100%" >
+			<l:content>
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title id="registrationTitle" level="H2" text="" />
+						</Toolbar>
+					</headerToolbar>
+					<FlexBox
+						direction="Column"
+						alignItems="Center"
+						justifyContent="Center">
+						<items>
+							<Label id="regJMBGLabel" text="" design="Bold" />
+                  			<Input id="jmbgID" type="Number" placeholder="" width="280px" maxLength="13" />
+                  			<Label id="regPhoneLabel" text="" design="Bold" />
+                  			<Input id="phoneID" type="Tel" placeholder="" width="280px" maxLength="20" />
+                  			<Label id="regNameLabel" text="" design="Bold" />
+                  			<Input id="nameID" type="Text" placeholder="" width="280px" maxLength="40" />
+                  			
+                  			<Label id="reglanguageLabel" text="" design="Bold" />
+                  			<Select
+                  				id="languageSelect"
+                  				selectedKey="sr_RS"
+                  				width="170px"
+								items="{/LanguageCollection}"
+								change="languageChanged">
+								<items> 
+									<core:Item key="{key}" text="{text}" />
+								</items> 
+							</Select>
+                  			<Label id="regEmailLabel" text="" design="Bold" />
+                  			<Input 
+                  				id="userRegID" 
+                  				type="Text" 
+                  				placeholder="" 
+                  				width="280px" 
+                  				maxLength="30" 
+                  				liveChange="onUsernameChange" />
+                  			<Label id="regPasswordLabel" text="" design="Bold" />
+                  			<Input 
+                  				id="passRegID" 
+                  				type="Password" 
+                  				placeholder="" 
+                  				width="280px" 
+                  				maxLength="30" />
+                  			<Label id="regPassAgainLabel" text="" design="Bold" />
+                  			<Input 
+                  				id="passRegID2" 
+                  				type="Password" 
+                  				placeholder="" 
+                  				width="280px" 
+                  				maxLength="30" />
+                  			<Label id="regEmptyLabel" text="" design="Bold" />
+                  			<Text id="regAppDownloadLabel" text="" textAlign="Center" width="300px" />
+						</items>
+					</FlexBox>
+					</Panel>
+			</l:content>
+		</l:VerticalLayout>
+		<footer>
+			<Bar>
+				<contentMiddle>
+					<Button 
+						id="btnRegister"
+						icon="sap-icon://sys-enter" 
+						text="" 
+						type="Emphasized" 
+						press="btnRegister"  />
+				</contentMiddle>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

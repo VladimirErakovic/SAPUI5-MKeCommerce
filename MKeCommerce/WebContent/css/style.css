@@ -1,0 +1,105 @@
+ .sapMStdTileIconDiv .sapUiIcon{  /* icons on tile #3FD166 */
+	color: #35B53D !important;
+	font-size: 2.5rem !important;
+}
+
+.sapMStdTileTitle{	/* title on tile */
+	color: #009DE0 !important;
+	font-size: 1.1rem !important;
+	line-height: 1.2rem !important;
+	height: 3.4rem !important;
+}
+
+.sapMStdTileInfo{	/* info on tile #808080 */
+	white-space: normal !important;
+	color: #7D7D7D !important;
+	text-align: left !important;
+	margin-top: 0.5rem !important;
+}
+
+.sapMStdTileTopRow{
+	margin-bottom: 0.5rem !important;
+}
+
+.sapMTile{	/* tile 0ABB18 */
+	border: 1px solid #6B84CF !important;
+}
+   
+#txtCompanyName{
+	color: #FFFFFF !important;
+} 
+
+.calculator{
+	color: #299620 !important;
+	font-size: 1.4rem !important;
+} 
+
+.calculatedValue{
+	font-size: 2rem !important;
+}
+
+.sapMObjectStatus{
+	color: #299620 !important;
+}
+
+
+.sapMText.sapMObjLTitle{ 	/* list title */
+	color: #009DE0 !important;
+}
+
+.sapMOHRTitleText{	/* details title */
+	color: #009DE0 !important;	
+}
+
+.sapMObjLIcon{	/* list icon */
+	color: #299620 !important;
+}
+
+#SelectDialog-subHeader{   /* search field on select dialog disable */
+	display: none !important;
+}
+
+#NegativeDialog-subHeader{
+	display: none !important;
+}
+
+.sapMSLIImgIcon{   /* list icon */
+	color: #009DE0 !important;
+	font-size: 2.0rem !important;
+	margin-right: 0.5rem !important;
+}
+
+ /* .sap-desktop .sapMIBar.sapMHeader-CTX{    /* page top bar 
+	background-color: #C7EDC0 !important;
+}   */
+
+
+.sapMTC{     /* .sapMTCScrl */
+	background-color: #BED7E8 !important;
+}
+
+#RulesDialog, #AgreementDialog{
+	padding-right: 0.5rem !important;
+	padding-left: 0.5rem !important;
+	text-align: center !important;
+}
+
+#RulesDialog-title, #AgreementDialog-title{
+	font-size: 1.1rem !important;
+	color: #299620 !important;
+	style: bold !important;
+}
+
+.devTeam{
+	font-size: large !important;
+	color: #009DE0 !important;
+	font-weight: bold !important;	
+}
+
+
+.sapUiResponsiveMargin{
+	margin-bottom: 1px !important;
+}
+
+
+

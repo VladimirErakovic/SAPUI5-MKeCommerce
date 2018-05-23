@@ -1,0 +1,92 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="mk.ecommerce.view.Notifications" 
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<Page 
+		title=""
+		class="sapUiResponsiveContentPadding" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+			<List
+				id="notificationsList"
+				items="{/EtTimelineSet}"
+				mode="{device>/listMode}"	
+				noDataText=""
+				headerText="" 
+				busyIndicatorDelay="0" >
+				<items>
+					<NotificationListItem
+						title="{
+							parts:[
+									{path:'Notty'}, 
+									{path: 'Notar'}
+								],
+							formatter: 'mk.ecommerce.util.Formatter.notificationType'
+						}"
+						description="{Notxt}"
+						showCloseButton="false"
+						unread="{
+								parts:[
+									{path:'Notar'}, 
+									{path: 'Notst'}
+								],
+								formatter: 'mk.ecommerce.util.Formatter.isArchived'
+							}"
+						priority="{
+								path: 'Notty',
+								formatter: 'mk.ecommerce.util.Formatter.typeColors'
+							}"
+						datetime="{
+								path: 'Kdate',
+								formatter: 'mk.ecommerce.util.Formatter.date'
+							}"
+
+						press="onListItemPress" >
+						<buttons>
+							<Button 
+								id="notifButton"
+								text="" 
+								visible="{
+									parts:[
+										{path:'Notty'}, 
+										{path: 'Notar'}
+									],
+									formatter: 'mk.ecommerce.util.Formatter.notifBtnVisibility'
+								}"
+								tooltip="{Grsid}"
+								type="Emphasized" 
+								press="onOpenPress">
+							</Button>
+						</buttons>
+						
+					</NotificationListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+                  	<Button
+                  		id="markAllNotifsAsRead"
+						icon="sap-icon://activities" 
+						text=""
+						type="Accept" 
+                  		press="onMarkAllNotifs" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,47 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="mk.ecommerce.view.BulletinBoard" 
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<Page 		
+		title=""
+		enableScrolling="false" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		
+	    <content>
+	        <core:HTML
+	        	id="iframeMain" >
+	       	</core:HTML>
+	    </content>
+	    <content>
+	        <core:HTML 
+	        	id="iframeBanner" >
+	        </core:HTML> 
+	    </content>
+	
+		<footer>
+	      	<Bar>
+				<contentMiddle>
+					<Button 
+						id="btnBannerLink"
+						icon="sap-icon://chain-link" 
+						text="" 
+						type="Emphasized" 
+						press="openBannerLink" />
+				</contentMiddle>
+	      	</Bar>
+	    </footer>
+	</Page>
+</mvc:View>

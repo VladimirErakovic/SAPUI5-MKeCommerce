@@ -1,0 +1,35 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="mk.ecommerce.view.split.Info"  
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page 		
+		id="infoDetailsPage"
+		title=""
+		class="sapUiFioriObjectPage"  
+		showNavButton="{device>/isPhone}" 
+		navButtonPress="handleNavButtonPress" >
+		
+		<ObjectHeader 
+			id="infoDetailHeader"
+			title="{ 
+				wrapping: 'true'
+			}"
+			responsive="false">
+		</ObjectHeader>
+		
+	    <content
+	    	verticalScrolling="false">
+	        <core:HTML 
+	        	id="htmlWeb" />
+	    </content>
+			
+		<footer>
+	      <Bar>
+
+	      </Bar>
+	    </footer>
+	</Page>
+</mvc:View>

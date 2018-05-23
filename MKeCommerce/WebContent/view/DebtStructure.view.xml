@@ -1,0 +1,66 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="mk.ecommerce.view.DebtStructure" 
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<Page 
+		title=""
+		class="sapUiResponsiveContentPadding" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back" 
+	                 	press="onNavBack" />
+				</contentLeft>
+				<contentMiddle>
+					<Image src="images/mkec_logo_text50.png" height="40px"></Image>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+        	<List 
+        		id="idListDebtStructure" 
+        		items="{/EtZaduzenjaSet}"
+        		noDataText="{i18n>NoDataText}"
+        		headerText="{i18n>DebtStructureTitle}"
+        		busyIndicatorDelay="0" >
+            	<items>
+					<ObjectListItem
+						id="debtListItem"
+						title="{i18n>DebtContractNumber} {Ugovor}"
+						number="{
+								path: 'Iznos',
+								formatter: 'mk.ecommerce.util.Formatter.currencyValue'
+							}"
+						numberUnit="{Val}"
+						intro="{Maktx}" >
+						<attributes> 
+							<ObjectAttribute 
+								text="{i18n>DebtYear} {Godina}" />
+							<ObjectAttribute text="{i18n>DebtAmount} {
+								path: 'Kolic',
+								formatter: 'mk.ecommerce.util.Formatter.quantity'
+							}" /> 
+							<ObjectAttribute text="{i18n>DebtMeasureUnit} {Jm}" />	
+						</attributes> 
+						<firstStatus>
+							<ObjectStatus
+								text="{Tipsutxt}" />
+						</firstStatus>
+					</ObjectListItem>
+            	</items>
+        	</List>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Label 
+						id="labelCreditLimit"
+						text="" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>
