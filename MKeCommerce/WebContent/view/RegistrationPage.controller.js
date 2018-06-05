@@ -192,7 +192,7 @@ sap.ui.controller("mk.ecommerce.view.RegistrationPage", {
 	
 	Accept: function() {
 
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_DTA_REGISTRATION_SRV/";		
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_DTA_REGISTRATION_SRV/";		
 		var oModel = new sap.ui.model.odata.ODataModel(url, true, user, pass);
 			
 		var oView = this.getView();
