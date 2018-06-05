@@ -33,7 +33,7 @@ sap.ui.controller("mk.ecommerce.view.Lager", {
 		oView.setNoDataText(oBundle.getText("NoDataText"));
 		this.getView().byId("btnCalculator").setText(oBundle.getText("CalcTitle"));
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_PARTNER_LAGER_SRV/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_PARTNER_LAGER_SRV/";
 		var oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oView.setModel(oModel); 
 		
