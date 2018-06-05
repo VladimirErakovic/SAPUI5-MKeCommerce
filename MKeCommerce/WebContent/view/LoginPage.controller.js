@@ -26,7 +26,7 @@ sap.ui.controller("mk.ecommerce.view.LoginPage", {
 	        }
 		}
 		
-		var urlCred = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_TEST_CONNECTION_SRV/";
+		var urlCred = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_TEST_CONNECTION_SRV/";
 		var oModelCred = new sap.ui.model.odata.ODataModel(urlCred, true); 
 		
 		var sid = "DEV";   // izbor servera
@@ -158,7 +158,7 @@ sap.ui.controller("mk.ecommerce.view.LoginPage", {
 		
 		that = this;
 		
-		var urlLogin = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_DTA_LOGIN_SRV/";
+		var urlLogin = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_DTA_LOGIN_SRV/";
 		var oModel = new sap.ui.model.odata.ODataModel(urlLogin, true, param1, param2); 
 		
 		var oView = this.getView();
