@@ -32,7 +32,7 @@ sap.ui.controller("mk.ecommerce.view.Archive", {
 		oView.setHeaderText(oBundle.getText("ArchiveTitle"));
 		oView.setNoDataText(oBundle.getText("NoDataText"));
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_NOTIF_GET_LIST_SRV_02/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_NOTIF_GET_LIST_SRV_02/";
 		var oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oView.setModel(oModel);    //oView
 
