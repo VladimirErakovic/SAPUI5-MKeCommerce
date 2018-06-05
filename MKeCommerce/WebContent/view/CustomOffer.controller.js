@@ -34,7 +34,7 @@ sap.ui.controller("mk.ecommerce.view.CustomOffer", {
 		
 		var oView = this.getView().byId("materialSelect");
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_GET_MATER_SRV/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_GET_MATER_SRV/";
 		var oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oView.setModel(oModel); 
 		
@@ -306,7 +306,7 @@ sap.ui.controller("mk.ecommerce.view.CustomOffer", {
 	
 	onSendOffer: function() {
 		
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_PARTNER_PONUDA_SRV/";		
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_PARTNER_PONUDA_SRV/";		
 		var oModel = new sap.ui.model.odata.ODataModel(url, true, user, pass); 
 					
 		var oView = this.getView();
