@@ -44,7 +44,7 @@ sap.ui.controller("mk.ecommerce.view.split.OffersMaster", {
 		selectSmerp.setTooltip(oBundle.getText("BtnFilterSmerp"));	//Filter po tipu ponude
 		
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_LIST_SRV_01/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_LIST_SRV_01/";
 		oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oView.setModel(oModel);    
 
@@ -94,7 +94,7 @@ sap.ui.controller("mk.ecommerce.view.split.OffersMaster", {
 				oView.setNoDataText(oBundle.getText("MasterListNoDataText"));
 
 				// Using OData model to connect against a real service
-				var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_LIST_SRV_01/";
+				var url = "proxy/https/$$$/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_LIST_SRV_01/";
 				oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 				oView.setModel(oModel);    
 					
