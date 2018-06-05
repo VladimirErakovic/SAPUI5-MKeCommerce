@@ -40,7 +40,7 @@ sap.ui.controller("mk.ecommerce.view.split.CustomMaster", {
 		
 		oView = this.getView().byId("listCustoms");
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_LIST_SRV_01/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_LIST_SRV_01/";
 		oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oView.setModel(oModel);   
 		
@@ -55,48 +55,7 @@ sap.ui.controller("mk.ecommerce.view.split.CustomMaster", {
 	        
 	    });  
 		
-	    //this._oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-	    //this._oRouter.attachRouteMatched(this.handleRouteMatched, this);
-
 	},
-	
-	
-/**	handleRouteMatched : function (evt) {
-		
-		if (evt.getParameter("name") == "CustomMaster") {
-			
-			if(firstEnter === false) {
-				
-				console.log(evt.getParameter("name"));
-				
-				var oJQueryStorage = jQuery.sap.storage(jQuery.sap.storage.Type.local);
-				user = oJQueryStorage.get("user");
-				pass = oJQueryStorage.get("pass"); 
-				partnid = oJQueryStorage.get("partnid");
-				language = oJQueryStorage.get("lang");
-				
-				pageTitle = this.getView().byId("pageCustomMaster");
-				listCustom = this.getView().byId("listCustoms");
-				
-				if(language == "hu_HU") {
-			        // read texts from i18n_hu model
-			        oBundle = jQuery.sap.resources({url: "i18n/i18n_hu.properties"});
-				} else {
-			        // read texts from i18n model
-			        oBundle = jQuery.sap.resources({url: "i18n/i18n.properties"});
-				} 
-				
-				pageTitle.setTitle(oBundle.getText("CustomMasterTitle"));
-				listCustom.setNoDataText(oBundle.getText("MasterListNoDataText"));
-				
-				sap.m.MessageToast.show(oBundle.getText("CustomOPressRefresh"), {duration: 5000, width: "17em", closeOnBrowserNavigation: false}); //Pritisnite dugme 'Osveži' da bi se lista ažurirala.
-			        
-			}
-			
-		    firstEnter = false;
-		}
-		
-	},  **/
 	
 	
 	handleSelect: function(oEvent) {
