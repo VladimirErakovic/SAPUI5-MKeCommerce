@@ -30,7 +30,7 @@ sap.ui.controller("mk.ecommerce.view.BulletinBoard", {
 		btnBannerLink.setText(oBundle.getText("BulletinBoardBannerLink"));
 		btnBannerLink.focus(false);
 		
-		var urlMain = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_BILBOARD_GET_LIST_SRV/";		
+		var urlMain = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_BILBOARD_GET_LIST_SRV/";		
 		var oModelMain = new sap.ui.model.odata.ODataModel(urlMain, true, user, pass);
 		
 		var ntfcid = "0";
@@ -72,7 +72,7 @@ sap.ui.controller("mk.ecommerce.view.BulletinBoard", {
 		);  
 		
 		
-		var urlBanner = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_BANNER_GET_SRV/";		
+		var urlBanner = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_BANNER_GET_SRV/";		
 		var oModelBanner = new sap.ui.model.odata.ODataModel(urlBanner, true, user, pass);
 		
 		var ntfcid = "0";
