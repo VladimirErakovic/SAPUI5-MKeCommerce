@@ -40,11 +40,7 @@ sap.ui.controller("mk.ecommerce.view.DebtStructure", {
 	        oView.setModel(i18nSR, "i18n");
 		}
 		
-		//oView.setHeaderText(oBundle.getText("DebtStructureTitle"));
-		//oView.setNoDataText(oBundle.getText("NoDataText"));
-		// Using OData model to connect against a real service
-		//var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_PARTNER_ZADUZENJA_SRV/";  // stari servis, vise se ne koristi..
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_CREDIT_LIMIT_SRV/";		
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_CREDIT_LIMIT_SRV/";		
 		oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oView.setModel(oModel); 
 			
