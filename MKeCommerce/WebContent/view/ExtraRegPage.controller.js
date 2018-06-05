@@ -49,14 +49,14 @@ sap.ui.controller("mk.ecommerce.view.ExtraRegPage", {
 		
 		var oCompany = this.getView().byId("companySelect");
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_GET_BUKRS_SRV/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_GET_BUKRS_SRV/";
 		var oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oCompany.setModel(oModel); 
 		
 		var oOtmes = oView.byId("pplaceSelect");
 		
 		// Using OData model to connect against a real service
-		var url2 = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_GET_OTMES_SRV/";
+		var url2 = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_GET_OTMES_SRV/";
 		var oModel2 = new sap.ui.model.odata.ODataModel(url2, false, user, pass);
 		oOtmes.setModel(oModel2);
 		
@@ -85,7 +85,7 @@ sap.ui.controller("mk.ecommerce.view.ExtraRegPage", {
 		var oOtmes = oView.byId("pplaceSelect");
 		
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_GET_OTMES_SRV/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_GET_OTMES_SRV/";
 		var oModel2 = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oOtmes.setModel(oModel2);
 			
@@ -115,7 +115,7 @@ sap.ui.controller("mk.ecommerce.view.ExtraRegPage", {
 		var partnid = oJQueryStorage.get("partnid");
 		console.log("partnid: " + partnid);	
 		
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_PARTNER_SET_MDATA_SRV/";		
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_PARTNER_SET_MDATA_SRV/";		
 		var oModel3 = new sap.ui.model.odata.ODataModel(url, true, user, pass);
 
 		
