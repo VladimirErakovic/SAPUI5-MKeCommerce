@@ -47,7 +47,7 @@ sap.ui.controller("mk.ecommerce.view.split.Info", {
 				
 				
 				if(ntfcid !== null) {
-					var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_BILBOARD_GET_LIST_SRV/";		
+					var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_BILBOARD_GET_LIST_SRV/";		
 					var oModel = new sap.ui.model.odata.ODataModel(url, true, user, pass);
 	
 					oModel.read("/BoardSet(IAppid='1000',INtfcid='" + ntfcid + "',IPartnid='" + partnid + "')", null, null, false, 
