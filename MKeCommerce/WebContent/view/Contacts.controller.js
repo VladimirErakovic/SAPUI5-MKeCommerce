@@ -39,7 +39,7 @@ sap.ui.controller("mk.ecommerce.view.Contacts", {
 		oView.setHeaderText(oBundle.getText("ContactsTitle"));
 		oView.setNoDataText(oBundle.getText("NoDataText"));
 		// Using OData model to connect against a real service
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_GET_CONTACT_LIST_SRV/";
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_GET_CONTACT_LIST_SRV/";
 		var oModel = new sap.ui.model.odata.ODataModel(url, false, user, pass);
 		oView.setModel(oModel); 
 		
