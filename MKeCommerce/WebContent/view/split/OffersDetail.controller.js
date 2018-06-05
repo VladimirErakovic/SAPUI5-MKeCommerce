@@ -94,7 +94,7 @@ sap.ui.controller("mk.ecommerce.view.split.OffersDetail", {
 				amountInput.setValue(0);
 				
 				if(ntfcid !== null) {
-					var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_PONUDA_GET_DETAIL_2_SRV/";		
+					var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_PONUDA_GET_DETAIL_2_SRV/";		
 					var oModel = new sap.ui.model.odata.ODataModel(url, true, user, pass);
 	
 					oModel.read("/OfferSet(IAppid='1000',INtfcid='" + ntfcid + "',IPartnid='" + partnid + "')", null, null, false, 
@@ -257,14 +257,14 @@ sap.ui.controller("mk.ecommerce.view.split.OffersDetail", {
 		var offerPriceStr = oView.byId("idOfferPrice").valueOf().getValue();
 		offerPriceStr = offerPriceStr.replace('.','');
 		offerPriceStr = offerPriceStr.replace(',','.');
-        var number = Number(offerPriceStr);  
-        var offerPrice = parseFloat(number).toFixed(2);
+        	var number = Number(offerPriceStr);  
+        	var offerPrice = parseFloat(number).toFixed(2);
 				
 		var offerAmount = oView.byId("idOfferAmount").valueOf().getValue();
 		var total = offerPrice * parseFloat(offerAmount).toFixed(2);
 		
-        var floatTotal = parseFloat(total).toFixed(2);     
-        var formatter = new Intl.NumberFormat('de-DE', {
+        	var floatTotal = parseFloat(total).toFixed(2);     
+        	var formatter = new Intl.NumberFormat('de-DE', {
         	minimumFractionDigits: 2
         });  
 		console.log("Total: " + formatter.format(total));
@@ -349,7 +349,7 @@ sap.ui.controller("mk.ecommerce.view.split.OffersDetail", {
 		
 		dialog.close();
 		
-		var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_PONUDA_RESPOND_SRV/";		
+		var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_PONUDA_RESPOND_SRV/";		
 		var oModel = new sap.ui.model.odata.ODataModel(url, true, user, pass); 
 					
 		var oView = this.getView();
@@ -360,9 +360,9 @@ sap.ui.controller("mk.ecommerce.view.split.OffersDetail", {
 		var priceStr = oView.byId("idOfferPrice").valueOf().getValue();
 		priceStr = priceStr.replace('.','');
 		priceStr = priceStr.replace(',','.');
-        var number = Number(priceStr);
-        //var formatter = new Intl.NumberFormat('en-IN');  
-        var floatValue = parseFloat(number).toFixed(2);
+        	var number = Number(priceStr);
+        	//var formatter = new Intl.NumberFormat('en-IN');  
+        	var floatValue = parseFloat(number).toFixed(2);
 		price = floatValue + "d";
 		console.log(price);
 		
@@ -488,7 +488,7 @@ sap.ui.controller("mk.ecommerce.view.split.OffersDetail", {
 				} 
 
 				
-				var url = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_PONUDA_NEGATIVE_SRV/";		
+				var url = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_PONUDA_NEGATIVE_SRV/";		
 				var oModel = new sap.ui.model.odata.ODataModel(url, true, user, pass); 
 				
 				var konkCena = 0 + "d";
@@ -591,7 +591,7 @@ sap.ui.controller("mk.ecommerce.view.split.OffersDetail", {
 				press: function () {
 					
 					
-					var urlComp = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_PONUDA_NEGATIVE_SRV/";		
+					var urlComp = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_PONUDA_NEGATIVE_SRV/";		
 					var oModelComp = new sap.ui.model.odata.ODataModel(urlComp, true, user, pass); 
 
 					var partAnswer = "5";
@@ -599,8 +599,8 @@ sap.ui.controller("mk.ecommerce.view.split.OffersDetail", {
 					var priceStr = sap.ui.getCore().byId('competPrice').valueOf().getValue();
 					//priceStr = priceStr.replace('.','');  ne treba jer ce skinuti decimale ako unosi sa tackom..
 					priceStr = priceStr.replace(',','.');
-			        var number = Number(priceStr);  
-			        var floatValue = parseFloat(number).toFixed(2);
+			        	var number = Number(priceStr);  
+			        	var floatValue = parseFloat(number).toFixed(2);
 					var konkCena = floatValue + "d";
 					console.log(konkCena);
 					var konkIme = sap.ui.getCore().byId('competName').valueOf().getValue();
