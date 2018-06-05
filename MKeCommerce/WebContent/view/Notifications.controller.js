@@ -90,7 +90,7 @@ sap.ui.controller("mk.ecommerce.view.Notifications", {
 				
 				console.log(evt.getParameter("name") + " Jezik: " + language);
 				// Using OData model to connect against a real service
-				var urlTimeline = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_TIMELINE_SRV/";
+				var urlTimeline = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_TIMELINE_SRV/";
 				var oModelTimeline = new sap.ui.model.odata.ODataModel(urlTimeline, true, user, pass);
 				oView.setModel(oModelTimeline); 
 	
@@ -118,7 +118,7 @@ sap.ui.controller("mk.ecommerce.view.Notifications", {
 
 		var grsid = oEvent.getSource().getTooltip();
 		
-		var urlNotifRead = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_GCM_NOTIF_READ_SRV/";		
+		var urlNotifRead = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_GCM_NOTIF_READ_SRV/";		
 		var oModel = new sap.ui.model.odata.ODataModel(urlNotifRead, true, user, pass);
 
 		oModel.read("/Notif2Set(IAppid='1000',IGrsid='" + grsid + "',IPartnid='" + partnid + "')", null, null, false, 
@@ -156,7 +156,7 @@ sap.ui.controller("mk.ecommerce.view.Notifications", {
 		//oDialogFragment.open();  
 		
 		
-		var urlAllNotifRead = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_READ_ALL_SRV/";		
+		var urlAllNotifRead = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_READ_ALL_SRV/";		
 		var oAllNotifReadModel = new sap.ui.model.odata.ODataModel(urlAllNotifRead, true, user, pass);
 		
 
@@ -170,7 +170,7 @@ sap.ui.controller("mk.ecommerce.view.Notifications", {
 			    	
 			    	// refresh cele liste
 			    	var oView = that.getView().byId("notificationsList");
-					var urlTimeline = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_TIMELINE_SRV/";
+					var urlTimeline = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_TIMELINE_SRV/";
 					var oModelTimeline = new sap.ui.model.odata.ODataModel(urlTimeline, true, user, pass);
 					oView.setModel(oModelTimeline); 
 						
