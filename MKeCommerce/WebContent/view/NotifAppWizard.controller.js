@@ -118,7 +118,7 @@ sap.ui.controller("mk.ecommerce.view.NotifAppWizard", {
         var interval = 0;
         var appty = "W";
         
-		var urlNotifAppTest = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_STAT_SRV/";
+		var urlNotifAppTest = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_STAT_SRV/";
 		var oModelNotifAppTest = new sap.ui.model.odata.ODataModel(urlNotifAppTest, true, user, pass); 
  
 		oModelNotifAppTest.read("/NcountSet(IAppid='1000',IPartnid='" + partnid + "',IAppty='" + appty + "',IRefti=" + interval + ")", null, null, false, 
