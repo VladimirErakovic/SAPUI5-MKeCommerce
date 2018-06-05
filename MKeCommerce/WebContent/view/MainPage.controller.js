@@ -95,7 +95,7 @@ sap.ui.controller("mk.ecommerce.view.MainPage", {
 	        var interval = 0;
 	        var appty = "W";
 	        
-			var urlOfferNum = "proxy/https/sapgw.mk-group.org:42080/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_STAT_SRV/";
+			var urlOfferNum = "proxy/https/***/sap/opu/odata/SAP/ZMKEC_UI5_NOTIF_GET_STAT_SRV/";
 			var oModelOfferNum = new sap.ui.model.odata.ODataModel(urlOfferNum, true, user, pass); 
 	 
 			oModelOfferNum.read("/NcountSet(IAppid='1000',IPartnid='" + partnid + "',IAppty='" + appty + "',IRefti=" + interval + ")", null, null, false, 
